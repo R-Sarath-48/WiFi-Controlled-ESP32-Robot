@@ -8,22 +8,23 @@ The robot integrates motor control and OLED-based animated eye rendering to crea
 
 ## Components Used
 Component	Purpose
-ESP32 Development Board	Main controller and WiFi communication
-L298N Motor Driver	Controls DC motors
-DC Motors	Robot movement
-SH1106 OLED Display	Animated robotic eye display
-Robot Chassis	Mechanical structure
-Battery Pack	Power supply
-Jumper Wires	Circuit connections
-System Architecture
-Hardware Architecture
+ESP32 Development Board	Main controller and WiFi communication,
+ L298N Motor Driver	Controls DC motor,
+ DC Motors	Robot movement,
+ SH1106 OLED Display	Animated robotic eye display,
+ Robot Chassis	Mechanical structure,
+ Battery Pack	Power supply,
+ Jumper Wires	Circuit connections,
+ 
+## System Architecture
+### Hardware Architecture
 ESP32 acts as the central controller.
 L298N motor driver interfaces the ESP32 with the DC motors.
 OLED display is connected using I2C communication.
 Mobile devices communicate wirelessly with the ESP32 through WiFi.
 Battery powers the complete robotic system.
 
-## Software Architecture
+### Software Architecture
 ESP32 hosts an embedded HTTP web server.
 Web interface sends movement commands through HTTP requests.
 Firmware processes commands and controls motors in real time.
@@ -34,9 +35,9 @@ Non-blocking timing using millis() enables simultaneous multitasking.
 The robot includes a browser-based control interface hosted directly on the ESP32.
 
 ### Features
-Mobile responsive design
-Real-time directional control
-Touch-based navigation buttons
+Mobile responsive design,
+ Real-time directional control,
+ Touch-based navigation buttons 
 
 ### Wireless communication
 Low-latency command execution
